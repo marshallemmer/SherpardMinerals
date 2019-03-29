@@ -23,32 +23,44 @@
         <div class="jumbotron h-1 text-center">Welcome to Shepard Minerals</div>
 
         <%-- Build Site Navbar --%>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Shepherd</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="HomeScreen.aspx">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="ContactUs.aspx">ContactUs</a></li>
-                    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Shepherd</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="HomeScreen.aspx">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.aspx">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.aspx">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ContactUs.aspx">Contact Us</a>
+                    </li>
                 </ul>
+                <%--Make the login and sign up bars with icons --%>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li>
+                        <a href="Register.aspx"><span class="glyphicon glyphicon-user"></span>Register </a>
+                    </li>
+                    <li>
+                        <a href="Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
                 </ul>
             </div>
         </nav>
-        <%--<div>
-            <asp:Button ID="btnHome" runat="server" Text="Home" OnClick="btnHome_Click" />
-            <asp:Button ID="btnContact" runat="server" Text="Contact Us" OnClick="btnContact_Click" />
-        </div>--%>
 
-        <%-- The Content Pages will fill information below --%>
+         <%--The Content Pages will fill information below--%> 
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="MainDisplay" runat="server">
                 <h1>This is the default page on the master page</h1>
             </asp:ContentPlaceHolder>
         </div>

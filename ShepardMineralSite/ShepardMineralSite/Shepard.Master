@@ -8,6 +8,8 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/CustomStyleSheet.css" rel="stylesheet" />
+    <link href="Content/Icons.css" rel="stylesheet" />
+    
 
     <title>ShepardLLC</title>
    <%-- This is a test --%>
@@ -17,14 +19,34 @@
     <form id="form1" runat="server">
     <%-- Enclose the body with a container class div --%>
     <div class="container MyContainer">
-        <div class="jumbotron">Welcome to Shepard Minerals</div>
-        <%-- Make a SUPER basic networking system --%>
-        <div>
+        <%-- Make the Site Header --%>
+        <div class="jumbotron h-1 text-center">Welcome to Shepard Minerals</div>
+
+        <%-- Build Site Navbar --%>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Shepherd</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="HomeScreen.aspx">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="ContactUs.aspx">ContactUs</a></li>
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <%--<div>
             <asp:Button ID="btnHome" runat="server" Text="Home" OnClick="btnHome_Click" />
             <asp:Button ID="btnContact" runat="server" Text="Contact Us" OnClick="btnContact_Click" />
-        </div>
+        </div>--%>
 
-        <%-- Make test content --%>
+        <%-- The Content Pages will fill information below --%>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <h1>This is the default page on the master page</h1>
